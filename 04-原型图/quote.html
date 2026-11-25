@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>供应商报价台 · 设计稿</title><link rel="stylesheet" href="mock.css"></head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sb"></aside>
+  <div class="main">
+    <header class="topbar" id="tb"></header>
+    <div class="content">
+      <div class="page-head">
+        <h1>供应商报价台</h1>
+        <span class="sub">INQ2026100008 · 报价截止 2026-10-27 18:00</span>
+        <div class="actions"><span class="btn ghost">导出报价对比</span><span class="btn primary">保存并锁定报价</span></div>
+      </div>
+
+      <div class="grid g4">
+        <div class="kpi"><div class="lb">邀约供应商</div><div class="v">4<small>家</small></div><div class="df">全部已响应</div></div>
+        <div class="kpi"><div class="lb">有效报价</div><div class="v">4<small>份</small></div><div class="df">无缺项报价</div></div>
+        <div class="kpi"><div class="lb">最低含税总价</div><div class="v">13.1<small>万</small></div><div class="df">恒昌机电</div></div>
+        <div class="kpi"><div class="lb">报价状态</div><div class="v" style="font-size:20px;line-height:32px"><span class="tag bad">已锁定</span></div><div class="df">截止后不可修改</div></div>
+      </div>
+
+      <div class="panel mt16">
+        <h4>报价明细录入 · 按供应商分组</h4>
+        <div class="tbl-wrap" style="border:none">
+          <table>
+            <thead><tr><th class="nowrap">明细物料</th><th class="c nowrap">单位</th><th class="r nowrap">需求数量</th>
+              <th class="r">华科电子<br><span class="muted" style="font-weight:400">单价 / 小计</span></th>
+              <th class="r">恒昌机电<br><span class="muted" style="font-weight:400">单价 / 小计</span></th>
+              <th class="r">瑞丰物资<br><span class="muted" style="font-weight:400">单价 / 小计</span></th>
+              <th class="r">联信自动化<br><span class="muted" style="font-weight:400">单价 / 小计</span></th></tr></thead>
+            <tbody>
+              <tr><td>工业级伺服电机 <span class="muted">750W 220V</span></td><td class="c">台</td><td class="r num">12</td>
+                <td class="r num">7,850.00<div class="muted">94,200.00</div></td><td class="r num">7,300.00<div class="muted">87,600.00</div></td>
+                <td class="r num">8,050.00<div class="muted">96,600.00</div></td><td class="r num">8,200.00<div class="muted">98,400.00</div></td></tr>
+              <tr><td>伺服驱动器 <span class="muted">配套 3kW</span></td><td class="c">台</td><td class="r num">12</td>
+                <td class="r num">3,120.00<div class="muted">37,440.00</div></td><td class="r num">2,980.00<div class="muted">35,760.00</div></td>
+                <td class="r num">3,240.00<div class="muted">38,880.00</div></td><td class="r num">3,300.00<div class="muted">39,600.00</div></td></tr>
+              <tr><td>编码器线缆 <span class="muted">10m 屏蔽</span></td><td class="c">根</td><td class="r num">12</td>
+                <td class="r num">260.00<div class="muted">3,120.00</div></td><td class="r num">290.00<div class="muted">3,480.00</div></td>
+                <td class="r num">275.00<div class="muted">3,300.00</div></td><td class="r num">250.00<div class="muted">3,000.00</div></td></tr>
+              <tr><td>制动电阻 <span class="muted">200W</span></td><td class="c">只</td><td class="r num">12</td>
+                <td class="r num">320.00<div class="muted">3,840.00</div></td><td class="r num">305.00<div class="muted">3,660.00</div></td>
+                <td class="r num">335.00<div class="muted">4,020.00</div></td><td class="r num">330.00<div class="muted">3,960.00</div></td></tr>
+              <tr style="background:#F3F8F8"><td><b>含税总价</b></td><td></td><td></td>
+                <td class="r num"><b>￥138,600.00</b></td><td class="r num"><b>￥131,200.00</b></td>
+                <td class="r num"><b>￥142,800.00</b></td><td class="r num"><b>￥145,000.00</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="grid g2 mt16">
+        <div class="panel"><h4>供应商报价条件</h4>
+          <table>
+            <thead><tr><th>供应商</th><th class="nowrap">交期</th><th class="nowrap">账期</th><th class="nowrap">质保</th><th class="c nowrap">附件</th><th class="nowrap">录入人</th></tr></thead>
+            <tbody>
+              <tr><td>华科电子</td><td class="num">15 天</td><td>月结 60 天</td><td>24 个月</td><td class="c"><a>报价单.xlsx</a></td><td>陈立</td></tr>
+              <tr><td>恒昌机电</td><td class="num">28 天</td><td>预付 30%</td><td>12 个月</td><td class="c"><a>报价单.xlsx</a></td><td>陈立</td></tr>
+              <tr><td>瑞丰物资</td><td class="num">20 天</td><td>月结 30 天</td><td>18 个月</td><td class="c"><a>报价单.xlsx</a></td><td>陈立</td></tr>
+              <tr><td>联信自动化</td><td class="num">12 天</td><td>货到付款</td><td>12 个月</td><td class="c"><a>报价单.xlsx</a></td><td>陈立</td></tr>
+            </tbody>
+          </table>
+          <div class="notice mt16">报价须含税，税率 13%；系统按明细自动汇总并校验小计 = 单价 × 数量，避免前端篡改总额。</div>
+        </div>
+        <div class="panel"><h4>报价操作记录</h4>
+          <div class="tl">
+            <div class="ev cur"><div class="t">锁定报价<span class="tag bad">截止自动锁定</span></div><div class="m">2026-10-27 18:00:00 · 系统</div><div class="why">报价截止时间到达，4 家供应商报价全部锁定，进入待比价。</div></div>
+            <div class="ev"><div class="t">录入报价</div><div class="m">2026-10-27 16:42:18 · 陈立</div></div>
+            <div class="ev"><div class="t">供应商提交报价</div><div class="m">2026-10-26 10:12:33 · 联信自动化</div></div>
+            <div class="ev"><div class="t">发布询价</div><div class="m">2026-10-21 09:30:02 · 陈立</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+<script>Mock.shell('buyer','quote','需求与询价 / <b>供应商报价台</b>')</script>
+</body>
+</html>

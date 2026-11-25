@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>退货登记 · 设计稿</title><link rel="stylesheet" href="mock.css"></head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sb"></aside>
+  <div class="main"><header class="topbar" id="tb"></header>
+    <div class="content">
+      <div class="page-head"><h1>退货登记</h1><span class="sub">不合格品转退货，原明细保持待到货</span>
+        <div class="actions"><span class="btn primary"><svg width="14" height="14"><use href="#i-plus"/></svg>新建退货单</span></div></div>
+      <div class="grid g4">
+        <div class="kpi"><div class="lb">待供应商确认</div><div class="v">2<small>单</small></div><div class="df">涉及 14 件</div></div>
+        <div class="kpi"><div class="lb">换货中</div><div class="v">1<small>单</small></div><div class="df">预计 11-12 到货</div></div>
+        <div class="kpi"><div class="lb">已关闭</div><div class="v">7<small>单</small></div><div class="df">近 6 个月</div></div>
+        <div class="kpi"><div class="lb">退货金额</div><div class="v">￥4,860<small>.00</small></div><div class="df">占采购额 0.2%</div></div>
+      </div>
+      <div class="tbl-wrap mt16">
+        <div class="tbl-head"><h3>退货单</h3></div>
+        <table>
+          <thead><tr><th class="nowrap">退货单号</th><th class="nowrap">采购单</th><th>供应商</th><th>物料</th><th class="r">数量</th>
+            <th>不合格原因</th><th>处理方式</th><th class="c">状态</th><th class="nowrap">登记时间</th><th class="c">操作</th></tr></thead>
+          <tbody>
+            <tr><td class="code nowrap">RT2026110003</td><td><a>PO2026100018</a></td><td>华科电子</td><td>编码器线缆 10m</td><td class="r num">2</td><td>外皮破损，屏蔽层外露</td><td>换货</td><td class="c"><span class="tag warn">待供应商确认</span></td><td class="muted num">2026-11-08 10:25</td><td class="c nowrap"><a>查看</a> <a>催办</a></td></tr>
+            <tr><td class="code nowrap">RT2026100002</td><td><a>PO2026100014</a></td><td>达成劳保</td><td>防护手套 L 码</td><td class="r num">12</td><td>尺寸与订单不符</td><td>退货退款</td><td class="c"><span class="tag warn">待供应商确认</span></td><td class="muted num">2026-10-24 16:52</td><td class="c nowrap"><a>查看</a> <a>催办</a></td></tr>
+            <tr><td class="code nowrap">RT2026100001</td><td><a>PO2026100009</a></td><td>精工轴承</td><td>深沟球轴承 6205</td><td class="r num">6</td><td>转动异响</td><td>换货</td><td class="c"><span class="tag info">换货中</span></td><td class="muted num">2026-10-12 09:14</td><td class="c nowrap"><a>查看</a> <a>登记到货</a></td></tr>
+          </tbody>
+        </table>
+        <div class="tbl-foot"><span>共 10 条</span><div class="pager"><span class="pg on">1</span></div></div>
+      </div>
+      <div class="notice mt16">退货数量不得超过该明细不合格数；退货后采购单明细「待到货」数量不变，换货或退款完成后由采购专员确认结单。</div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+<script>Mock.shell('warehouse','returns','到货验收 / <b>退货登记</b>')</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>询价比价单 · 设计稿</title><link rel="stylesheet" href="mock.css"></head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sb"></aside>
+  <div class="main">
+    <header class="topbar" id="tb"></header>
+    <div class="content">
+      <div class="page-head">
+        <h1>询价比价单</h1>
+        <span class="sub">默认按「待本人处理优先、更新时间倒序」</span>
+        <div class="actions">
+          <span class="btn ghost"><svg width="14" height="14"><use href="#i-export"/></svg>导出</span>
+          <span class="btn primary"><svg width="14" height="14"><use href="#i-plus"/></svg>发布询价</span>
+        </div>
+      </div>
+
+      <div class="filters">
+        <div class="field"><label>询价单号</label><div class="input" style="width:180px;color:#8DA3A7">INQ2026…</div></div>
+        <div class="field"><label>供应商</label><div class="select"><b>全部供应商</b><svg width="12" height="12"><use href="#i-arrow"/></svg></div></div>
+        <div class="field"><label>报价截止</label><div class="input" style="width:210px;color:#8DA3A7">2026-10-01 至 2026-12-31</div></div>
+        <div class="field"><label>状态</label><div class="select" style="width:180px"><b>全部</b><svg width="12" height="12"><use href="#i-arrow"/></svg></div></div>
+        <div class="tail"><span class="btn ghost">重置</span><span class="btn primary">查询</span></div>
+      </div>
+
+      <div class="tbl-wrap">
+        <div class="tbl-head"><h3>询价单列表</h3>
+          <div class="tabs"><span class="tab on">全部 42</span><span class="tab">待办 7</span><span class="tab">处理中 12</span><span class="tab">已完成 20</span><span class="tab">异常 3</span></div>
+          <div class="r"><span class="btn ghost sm">批量催报价</span></div>
+        </div>
+        <table>
+          <thead><tr>
+            <th class="nowrap">询价单号</th><th>标题</th><th class="nowrap">关联需求</th><th class="c nowrap">供应商</th>
+            <th class="r nowrap">预算金额</th><th class="r nowrap">最低报价</th><th class="nowrap">报价截止</th><th class="c nowrap">状态</th>
+            <th class="nowrap">责任人</th><th class="nowrap">更新时间</th><th class="c nowrap">操作</th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="code nowrap">INQ2026100012</td><td>伺服系统备件采购</td><td><a>PR2026100011</a> +1</td><td class="c num">4</td><td class="r num">￥150,000.00</td><td class="r num">￥131,200.00</td><td class="nowrap">2026-10-30 18:00</td><td class="c"><span class="tag warn">待比价</span></td><td>陈立</td><td class="muted nowrap">2026-10-30 18:00:12</td><td class="c nowrap"><a>比价</a> <a>详情</a></td></tr>
+            <tr><td class="code nowrap">INQ2026100011</td><td>实验室仪器年度采购</td><td><a>PR2026100006</a></td><td class="c num">3</td><td class="r num">￥210,000.00</td><td class="r num">￥188,600.00</td><td class="nowrap">2026-11-02 12:00</td><td class="c"><span class="tag info">报价中</span></td><td>陈立</td><td class="muted nowrap">2026-10-29 17:22:41</td><td class="c nowrap"><a>录入报价</a> <a>详情</a></td></tr>
+            <tr><td class="code nowrap">INQ2026100010</td><td>劳保用品季度补货</td><td><a>PR2026100004</a></td><td class="c num">5</td><td class="r num">￥48,000.00</td><td class="r num">￥41,320.00</td><td class="nowrap">2026-11-05 18:00</td><td class="c"><span class="tag info">报价中</span></td><td>陈立</td><td class="muted nowrap">2026-10-29 11:08:07</td><td class="c nowrap"><a>录入报价</a> <a>详情</a></td></tr>
+            <tr><td class="code nowrap">INQ2026100009</td><td>车间液压油与润滑脂</td><td><a>PR2026100007</a></td><td class="c num">3</td><td class="r num">￥30,000.00</td><td class="r num">￥27,400.00</td><td class="nowrap">2026-10-28 18:00</td><td class="c"><span class="tag warn">待审批</span></td><td>陈立</td><td class="muted nowrap">2026-10-28 20:15:33</td><td class="c nowrap"><a>查看</a> <a>催审批</a></td></tr>
+            <tr><td class="code nowrap">INQ2026100008</td><td>伺服电机及驱动器</td><td><a>PR2026100011</a> +1</td><td class="c num">4</td><td class="r num">￥150,000.00</td><td class="r num">￥131,200.00</td><td class="nowrap">2026-10-27 18:00</td><td class="c"><span class="tag warn">待审批</span></td><td>陈立</td><td class="muted nowrap">2026-10-28 10:12:09</td><td class="c nowrap"><a>比价</a> <a>详情</a></td></tr>
+            <tr><td class="code nowrap">INQ2026100007</td><td>不锈钢法兰与管件</td><td><a>PR2026100010</a></td><td class="c num">3</td><td class="r num">￥40,000.00</td><td class="r num">￥36,480.00</td><td class="nowrap">2026-10-24 18:00</td><td class="c"><span class="tag ok">已定标</span></td><td>陈立</td><td class="muted nowrap">2026-10-25 09:40:18</td><td class="c nowrap"><a>查看</a> <a>采购单</a></td></tr>
+            <tr><td class="code nowrap">INQ2026100006</td><td>办公耗材集中采购</td><td><a>PR2026100009</a></td><td class="c num">6</td><td class="r num">￥8,000.00</td><td class="r num">￥6,580.00</td><td class="nowrap">2026-10-20 18:00</td><td class="c"><span class="tag ok">已定标</span></td><td>陈立</td><td class="muted nowrap">2026-10-21 10:02:55</td><td class="c nowrap"><a>查看</a> <a>采购单</a></td></tr>
+            <tr><td class="code nowrap">INQ2026100005</td><td>三坐标测针补货</td><td><a>PR2026100008</a></td><td class="c num">2</td><td class="r num">￥19,000.00</td><td class="r num">￥—</td><td class="nowrap">2026-10-18 18:00</td><td class="c"><span class="tag bad">已作废</span></td><td>陈立</td><td class="muted nowrap">2026-10-18 18:05:20</td><td class="c nowrap"><a>查看</a></td></tr>
+            <tr><td class="code nowrap">INQ2026100004</td><td>3D 打印耗材</td><td><a>PR2026100005</a></td><td class="c num">4</td><td class="r num">￥10,000.00</td><td class="r num">￥9,120.00</td><td class="nowrap">2026-10-16 18:00</td><td class="c"><span class="tag ok">已定标</span></td><td>陈立</td><td class="muted nowrap">2026-10-17 09:12:30</td><td class="c nowrap"><a>查看</a></td></tr>
+            <tr><td class="code nowrap">INQ2026100003</td><td>工装定制（春秋款）</td><td><a>PR2026100004</a></td><td class="c num">3</td><td class="r num">￥45,000.00</td><td class="r num">￥42,600.00</td><td class="nowrap">2026-10-12 18:00</td><td class="c"><span class="tag gray">草稿</span></td><td>陈立</td><td class="muted nowrap">2026-10-12 09:30:00</td><td class="c nowrap"><a>编辑</a> <a>发布</a></td></tr>
+          </tbody>
+        </table>
+        <div class="tbl-foot"><span>共 42 条</span>
+          <div class="pager"><span class="pg">‹</span><span class="pg on">1</span><span class="pg">2</span><span class="pg">3</span><span class="pg">4</span><span class="pg">5</span><span class="pg">›</span></div>
+        </div>
+      </div>
+
+      <div class="grid g3 mt16">
+        <div class="panel"><h4>发布询价 · 关键规则</h4>
+          <div class="small muted" style="line-height:24px">· 至少选择 2 家供应商，少于 2 家不可发布<br>· 设置报价截止时间，截止后系统自动锁定报价<br>· 附件支持 Excel 报价单，单文件 ≤20MB<br>· 发布后自动生成供应商待办与站内消息</div></div>
+        <div class="panel"><h4>报价锁定</h4>
+          <div class="flex"><span class="tag bad">已锁定</span><span class="small muted">INQ2026100008</span></div>
+          <div class="small muted mt8">截止后供应商不可再修改报价，采购专员补录需填写原因并记录操作日志。</div></div>
+        <div class="panel"><h4>异常处理</h4>
+          <div class="small muted" style="line-height:24px">· 有效报价不足 2 家 → 标记异常，需延期或作废<br>· 超时未报价 → 自动提醒，连续 2 次进入供应商评级<br>· 作废必须填写原因（≥5 字）</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+<script>Mock.shell('buyer','inquiry','需求与询价 / <b>询价比价单</b>')</script>
+</body>
+</html>

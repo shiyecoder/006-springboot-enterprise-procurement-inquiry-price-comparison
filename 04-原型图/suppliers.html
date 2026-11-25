@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>供应商档案 · 设计稿</title><link rel="stylesheet" href="mock.css"></head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sb"></aside>
+  <div class="main"><header class="topbar" id="tb"></header>
+    <div class="content">
+      <div class="page-head"><h1>供应商档案</h1><span class="sub">准入状态、评级与历史绩效</span>
+        <div class="actions"><span class="btn primary"><svg width="14" height="14"><use href="#i-plus"/></svg>新增供应商</span></div></div>
+      <div class="filters">
+        <div class="field"><label>供应商名称</label><div class="input" style="width:190px;color:#8DA3A7">名称 / 信用代码</div></div>
+        <div class="field"><label>主营品类</label><div class="select"><b>全部</b><svg width="12" height="12"><use href="#i-arrow"/></svg></div></div>
+        <div class="field"><label>准入状态</label><div class="select" style="width:160px"><b>合格供方</b><svg width="12" height="12"><use href="#i-arrow"/></svg></div></div>
+        <div class="tail"><span class="btn ghost">重置</span><span class="btn primary">查询</span></div>
+      </div>
+      <div class="tbl-wrap">
+        <div class="tbl-head"><h3>供应商清单</h3><span class="small muted">共 18 家</span></div>
+        <table>
+          <thead><tr><th>供应商名称</th><th>统一社会信用代码</th><th>主营品类</th><th>联系人</th><th class="c">评级</th>
+            <th class="r">准时率</th><th class="r">质量评分</th><th class="r">售后评分</th><th class="c">准入状态</th><th class="c">操作</th></tr></thead>
+          <tbody>
+            <tr><td>华科电子有限公司</td><td class="muted">91310115MA1K3X8L2T</td><td>电子设备</td><td>王经理</td><td class="c"><span class="tag ok">A</span></td><td class="r num">96%</td><td class="r num">94</td><td class="r num">90</td><td class="c"><span class="tag ok">合格供方</span></td><td class="c nowrap"><a>详情</a> <a>评价</a></td></tr>
+            <tr><td>恒昌机电设备有限公司</td><td class="muted">91310115MA1K5B2M9X</td><td>机电设备</td><td>李工</td><td class="c"><span class="tag ok">A-</span></td><td class="r num">88%</td><td class="r num">86</td><td class="r num">78</td><td class="c"><span class="tag ok">合格供方</span></td><td class="c nowrap"><a>详情</a> <a>评价</a></td></tr>
+            <tr><td>瑞丰物资有限公司</td><td class="muted">91310115MA1G7Y6K3P</td><td>工业耗材</td><td>张主管</td><td class="c"><span class="tag warn">B+</span></td><td class="r num">79%</td><td class="r num">81</td><td class="r num">72</td><td class="c"><span class="tag warn">观察期</span></td><td class="c nowrap"><a>详情</a> <a>评价</a></td></tr>
+            <tr><td>联信自动化有限公司</td><td class="muted">91310115MA1J2L4R7W</td><td>自动化组件</td><td>刘女士</td><td class="c"><span class="tag warn">B</span></td><td class="r num">92%</td><td class="r num">88</td><td class="r num">85</td><td class="c"><span class="tag ok">合格供方</span></td><td class="c nowrap"><a>详情</a> <a>评价</a></td></tr>
+            <tr><td>达成劳保用品有限公司</td><td class="muted">91310115MA1H9C5T2D</td><td>劳保用品</td><td>孙经理</td><td class="c"><span class="tag warn">B</span></td><td class="r num">84%</td><td class="r num">77</td><td class="r num">70</td><td class="c"><span class="tag ok">合格供方</span></td><td class="c nowrap"><a>详情</a> <a>评价</a></td></tr>
+            <tr><td>精工轴承有限公司</td><td class="muted">91310115MA1F4N8Q6C</td><td>备品备件</td><td>周经理</td><td class="c"><span class="tag ok">A-</span></td><td class="r num">91%</td><td class="r num">89</td><td class="r num">82</td><td class="c"><span class="tag ok">合格供方</span></td><td class="c nowrap"><a>详情</a> <a>评价</a></td></tr>
+            <tr><td>泰和办公设备有限公司</td><td class="muted">91310115MA1E6P3S9K</td><td>办公用品</td><td>徐女士</td><td class="c"><span class="tag gray">C</span></td><td class="r num">68%</td><td class="r num">65</td><td class="r num">60</td><td class="c"><span class="tag bad">已停用</span></td><td class="c nowrap"><a>详情</a> <a>评价</a></td></tr>
+          </tbody>
+        </table>
+        <div class="tbl-foot"><span>共 18 条</span><div class="pager"><span class="pg">‹</span><span class="pg on">1</span><span class="pg">2</span><span class="pg">›</span></div></div>
+      </div>
+      <div class="panel mt16"><h4>华科电子 · 历史绩效</h4>
+        <div class="grid g4">
+          <div><div class="small muted">近 6 个月中标</div><div class="num" style="font-size:20px;font-weight:600">8 次</div></div>
+          <div><div class="small muted">累计采购额</div><div class="num" style="font-size:20px;font-weight:600">￥482,600.00</div></div>
+          <div><div class="small muted">按期到货</div><div class="num" style="font-size:20px;font-weight:600">23 / 24 批</div></div>
+          <div><div class="small muted">退货率</div><div class="num" style="font-size:20px;font-weight:600">0.8%</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+<script>Mock.shell('buyer','suppliers','基础数据 / <b>供应商档案</b>')</script>
+</body>
+</html>

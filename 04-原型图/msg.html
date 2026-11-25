@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>消息中心 · 设计稿</title><link rel="stylesheet" href="mock.css"></head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sb"></aside>
+  <div class="main"><header class="topbar" id="tb"></header>
+    <div class="content">
+      <div class="page-head"><h1>消息中心</h1><span class="sub">待办、超时、退回与验收通知</span>
+        <div class="actions"><span class="btn ghost">全部标记已读</span></div></div>
+      <div class="grid g-2-1">
+        <div class="tbl-wrap">
+          <div class="tbl-head"><h3>消息列表</h3>
+            <div class="tabs"><span class="tab on">全部 14</span><span class="tab">未读 5</span><span class="tab">待办 4</span><span class="tab">系统 2</span></div></div>
+          <table>
+            <thead><tr><th class="c" style="width:28px"></th><th>标题</th><th>关联单据</th><th class="c">类型</th><th class="nowrap">时间</th><th class="c">操作</th></tr></thead>
+            <tbody>
+              <tr><td class="c"><span class="dot-s" style="background:#A62B32"></span></td><td>询价单 INQ2026100009 已等待 26 小时，请尽快审批</td><td class="code">INQ2026100009</td><td class="c"><span class="tag bad">超时预警</span></td><td class="muted nowrap">2026-10-31 14:20</td><td class="c nowrap"><a>去处理</a></td></tr>
+              <tr><td class="c"><span class="dot-s" style="background:#A62B32"></span></td><td>定标结果待审批：伺服电机及驱动器（￥138,600.00）</td><td class="code">INQ2026100008</td><td class="c"><span class="tag warn">待审批</span></td><td class="muted nowrap">2026-10-31 10:05</td><td class="c nowrap"><a>去处理</a></td></tr>
+              <tr><td class="c"><span class="dot-s" style="background:#A62B32"></span></td><td>采购单 PO2026100018 第 3 批到货，待验收 16 件</td><td class="code">PO2026100018</td><td class="c"><span class="tag warn">待验收</span></td><td class="muted nowrap">2026-10-31 09:42</td><td class="c nowrap"><a>去验收</a></td></tr>
+              <tr><td class="c"></td><td>需求 PR2026100007 被部门负责人退回，原因：库存充足</td><td class="code">PR2026100007</td><td class="c"><span class="tag bad">已退回</span></td><td class="muted nowrap">2026-10-30 16:11</td><td class="c nowrap"><a>查看</a></td></tr>
+              <tr><td class="c"></td><td>询价单 INQ2026100011 将于 48 小时后截止，2 家供应商未报价</td><td class="code">INQ2026100011</td><td class="c"><span class="tag info">提醒</span></td><td class="muted nowrap">2026-10-30 09:00</td><td class="c nowrap"><a>催报价</a></td></tr>
+              <tr><td class="c"></td><td>退货单 RT2026100003 供应商已确认，等待换货到货</td><td class="code">RT2026100003</td><td class="c"><span class="tag gray">系统</span></td><td class="muted nowrap">2026-10-29 18:33</td><td class="c nowrap"><a>查看</a></td></tr>
+            </tbody>
+          </table>
+          <div class="tbl-foot"><span>共 14 条 · 未读 5 条</span><div class="pager"><span class="pg on">1</span><span class="pg">2</span></div></div>
+        </div>
+        <div class="panel"><h4>消息偏好</h4>
+          <div class="small" style="line-height:30px">
+            <div><input type="checkbox" checked> 待我审批（站内 + 邮件）</div>
+            <div><input type="checkbox" checked> 即将超时（提前 4 小时）</div>
+            <div><input type="checkbox" checked> 被退回 / 驳回</div>
+            <div><input type="checkbox" checked> 到货待验收</div>
+            <div><input type="checkbox"> 每周采购摘要</div>
+          </div>
+          <div class="hr"></div>
+          <div class="small muted">消息包含业务编号与详情跳转地址，点击可直接进入对应单据。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+<script>Mock.shell('approver','msg','其他 / <b>消息中心</b>')</script>
+</body>
+</html>

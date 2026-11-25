@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>审批中心 · 设计稿</title><link rel="stylesheet" href="mock.css"></head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sb"></aside>
+  <div class="main">
+    <header class="topbar" id="tb"></header>
+    <div class="content">
+      <div class="page-head"><h1>审批中心</h1><span class="sub">按金额区间自动匹配审批人 · 6 项待处理</span>
+        <div class="actions"><span class="btn ghost">审批规则</span><span class="btn ghost">批量通过</span></div></div>
+
+      <div class="grid g4">
+        <div class="kpi"><div class="lb">待我审批</div><div class="v">6<small>项</small></div><div class="df">需求 2 · 定标 3 · 采购单 1</div></div>
+        <div class="kpi"><div class="lb">今日已处理</div><div class="v">9<small>项</small></div><div class="df">通过 8 · 驳回 1</div></div>
+        <div class="kpi"><div class="lb">平均审批时长</div><div class="v">4.2<small>h</small></div><div class="df">目标 ≤8h</div></div>
+        <div class="kpi"><div class="lb">超时预警</div><div class="v" style="color:#A62B32">1<small>项</small></div><div class="df">已超过 24h</div></div>
+      </div>
+
+      <div class="grid g-2-1 mt16">
+        <div class="tbl-wrap">
+          <div class="tbl-head"><h3>待办列表</h3>
+            <div class="tabs"><span class="tab on">全部 6</span><span class="tab">需求审批 2</span><span class="tab">定标审批 3</span><span class="tab">采购单 1</span></div></div>
+          <table>
+            <thead><tr><th>类型</th><th class="nowrap">单据编号</th><th>摘要</th><th class="r nowrap">金额</th><th class="c nowrap">紧急</th><th class="nowrap">提交人</th><th class="nowrap">已等待</th><th class="c nowrap">操作</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag blue">定标审批</span></td><td class="code nowrap">INQ2026100008</td><td>伺服电机及驱动器 · 推荐华科电子</td><td class="r num">￥138,600.00</td><td class="c"><span class="tag warn">普通</span></td><td>陈立</td><td class="num">18h</td><td class="c nowrap"><a>审批</a></td></tr>
+              <tr><td><span class="tag blue">定标审批</span></td><td class="code nowrap">INQ2026100009</td><td>车间液压油 · 推荐瑞丰物资</td><td class="r num">￥27,400.00</td><td class="c"><span class="tag bad">加急</span></td><td>陈立</td><td class="num" style="color:#A62B32">26h</td><td class="c nowrap"><a>审批</a></td></tr>
+              <tr><td><span class="tag gray">需求审批</span></td><td class="code nowrap">PR2026100012</td><td>生产制造部 · 伺服电机 12 台</td><td class="r num">￥86,400.00</td><td class="c"><span class="tag bad">加急</span></td><td>林晓</td><td class="num">6h</td><td class="c nowrap"><a>审批</a></td></tr>
+              <tr><td><span class="tag gray">需求审批</span></td><td class="code nowrap">PR2026100006</td><td>信息中心 · 机架式服务器 2 台</td><td class="r num">￥196,000.00</td><td class="c"><span class="tag warn">普通</span></td><td>马涛</td><td class="num">3h</td><td class="c nowrap"><a>审批</a></td></tr>
+              <tr><td><span class="tag info">采购单审批</span></td><td class="code nowrap">PO2026100018</td><td>华科电子 · 部分到货结单确认</td><td class="r num">￥110,240.00</td><td class="c"><span class="tag warn">普通</span></td><td>陈立</td><td class="num">2h</td><td class="c nowrap"><a>审批</a></td></tr>
+              <tr><td><span class="tag blue">定标审批</span></td><td class="code nowrap">INQ2026100006</td><td>办公耗材 · 最低价中标</td><td class="r num">￥6,580.00</td><td class="c"><span class="tag gray">不急</span></td><td>陈立</td><td class="num">1h</td><td class="c nowrap"><a>审批</a></td></tr>
+            </tbody>
+          </table>
+          <div class="tbl-foot"><span>共 6 条</span><div class="pager"><span class="pg on">1</span></div></div>
+        </div>
+
+        <div class="panel" style="border-color:#CFE0E1">
+          <h4>审批抽屉（点击行末「审批」后）</h4>
+          <div style="border:1px solid #DCE7E7;border-radius:8px;overflow:hidden">
+            <div style="background:#F3F8F8;padding:12px 14px;border-bottom:1px solid #DCE7E7">
+              <div class="flex"><b>INQ2026100008</b><span class="tag warn">待审批</span><span class="right small muted">陈立 提交</span></div>
+              <div class="small muted mt8">伺服电机及驱动器 · 4 家报价 · 推荐华科电子 88.4 分</div>
+            </div>
+            <div style="padding:14px">
+              <div class="dl" style="grid-template-columns:84px 1fr;row-gap:10px">
+                <dt>预算金额</dt><dd class="num">￥150,000.00</dd>
+                <dt>中标金额</dt><dd class="num">￥138,600.00</dd>
+                <dt>节约金额</dt><dd class="num" style="color:#247A58">￥11,400.00（7.6%）</dd>
+                <dt>最低价方案</dt><dd>恒昌机电 ￥131,200.00（非推荐）</dd>
+                <dt>偏离说明</dt><dd class="small">华科交期 15 天优于恒昌 28 天，综合得分领先 9.3 分</dd>
+              </div>
+              <div class="hr"></div>
+              <div class="small muted" style="margin-bottom:6px">审批意见（驳回/退回必填，≥5 字）</div>
+              <div class="input" style="height:56px;align-items:flex-start;padding-top:8px;color:#8DA3A7">请输入审批意见…</div>
+              <div class="flex mt16"><span class="btn primary">同意</span><span class="btn ghost">退回修改</span><span class="btn danger">驳回</span></div>
+            </div>
+          </div>
+          <div class="small muted mt16">金额区间审批规则：<br>≤5 万 部门负责人；5–50 万 采购总监；&gt;50 万 财务总监 + 总经理。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+<script>Mock.shell('approver','approve','审批 / <b>审批中心</b>')</script>
+</body>
+</html>

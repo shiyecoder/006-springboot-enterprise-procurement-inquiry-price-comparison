@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>菜单管理 · 设计稿</title><link rel="stylesheet" href="mock.css"></head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sb"></aside>
+  <div class="main"><header class="topbar" id="tb"></header>
+    <div class="content">
+      <div class="page-head"><h1>菜单管理</h1><span class="sub">菜单、按钮与权限标识统一维护</span>
+        <div class="actions"><span class="btn primary"><svg width="14" height="14"><use href="#i-plus"/></svg>新增菜单</span></div></div>
+      <div class="tbl-wrap">
+        <div class="tbl-head"><h3>菜单树</h3><span class="small muted">共 32 项（含按钮权限）</span></div>
+        <table>
+          <thead><tr><th>菜单名称</th><th>类型</th><th>路由 / 权限标识</th><th>图标</th><th class="c">排序</th><th class="c">可见</th><th class="c">操作</th></tr></thead>
+          <tbody>
+            <tr><td><b>工作台</b></td><td>目录</td><td class="muted">/dashboard</td><td class="muted">i-dash</td><td class="c num">1</td><td class="c"><span class="tag ok">显示</span></td><td class="c nowrap"><a>编辑</a> <a>新增</a></td></tr>
+            <tr><td style="padding-left:30px">采购分析看板</td><td>菜单</td><td class="muted">/dashboard/index · dashboard:view</td><td class="muted">—</td><td class="c num">2</td><td class="c"><span class="tag ok">显示</span></td><td class="c nowrap"><a>编辑</a> <a>新增</a></td></tr>
+            <tr><td><b>需求与询价</b></td><td>目录</td><td class="muted">/sourcing</td><td class="muted">i-inquiry</td><td class="c num">10</td><td class="c"><span class="tag ok">显示</span></td><td class="c nowrap"><a>编辑</a> <a>新增</a></td></tr>
+            <tr><td style="padding-left:30px">采购需求池</td><td>菜单</td><td class="muted">/requests · request:list</td><td class="muted">—</td><td class="c num">11</td><td class="c"><span class="tag ok">显示</span></td><td class="c nowrap"><a>编辑</a> <a>新增</a></td></tr>
+            <tr><td style="padding-left:50px">发起询价</td><td>按钮</td><td class="muted">inquiry:create</td><td class="muted">—</td><td class="c num">12</td><td class="c"><span class="tag gray">按钮</span></td><td class="c nowrap"><a>编辑</a></td></tr>
+            <tr><td style="padding-left:30px">询价比价单</td><td>菜单</td><td class="muted">/inquiry · inquiry:list</td><td class="muted">—</td><td class="c num">13</td><td class="c"><span class="tag ok">显示</span></td><td class="c nowrap"><a>编辑</a> <a>新增</a></td></tr>
+            <tr><td style="padding-left:30px">供应商报价台</td><td>菜单</td><td class="muted">/quote · quote:entry</td><td class="muted">—</td><td class="c num">14</td><td class="c"><span class="tag ok">显示</span></td><td class="c nowrap"><a>编辑</a> <a>新增</a></td></tr>
+            <tr><td><b>决策与执行</b></td><td>目录</td><td class="muted">/decision</td><td class="muted">i-compare</td><td class="c num">20</td><td class="c"><span class="tag ok">显示</span></td><td class="c nowrap"><a>编辑</a> <a>新增</a></td></tr>
+            <tr><td style="padding-left:30px">综合比价矩阵</td><td>菜单</td><td class="muted">/comparison · compare:view</td><td class="muted">—</td><td class="c num">21</td><td class="c"><span class="tag ok">显示</span></td><td class="c nowrap"><a>编辑</a> <a>新增</a></td></tr>
+            <tr><td style="padding-left:30px">比价规则配置</td><td>菜单</td><td class="muted">/rules · rule:config</td><td class="muted">—</td><td class="c num">22</td><td class="c"><span class="tag ok">显示</span></td><td class="c nowrap"><a>编辑</a> <a>新增</a></td></tr>
+            <tr><td><b>系统管理</b></td><td>目录</td><td class="muted">/system</td><td class="muted">i-menu</td><td class="c num">90</td><td class="c"><span class="tag ok">显示</span></td><td class="c nowrap"><a>编辑</a> <a>新增</a></td></tr>
+            <tr><td style="padding-left:30px">菜单管理</td><td>菜单</td><td class="muted">/menus · menu:manage</td><td class="muted">—</td><td class="c num">93</td><td class="c"><span class="tag gray">仅管理员</span></td><td class="c nowrap"><a>编辑</a> <a>新增</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="notice mt16">修改菜单后需重新登录或刷新权限缓存；删除菜单前检查是否已被角色引用。</div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+<script>Mock.shell('buyer','menus','系统 / <b>菜单管理</b>')</script>
+</body>
+</html>

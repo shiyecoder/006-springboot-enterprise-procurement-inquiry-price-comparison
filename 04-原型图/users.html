@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>用户与菜单管理 · 设计稿</title><link rel="stylesheet" href="mock.css"></head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sb"></aside>
+  <div class="main"><header class="topbar" id="tb"></header>
+    <div class="content">
+      <div class="page-head"><h1>用户管理</h1><span class="sub">账号、组织、角色与状态</span>
+        <div class="actions"><span class="btn primary"><svg width="14" height="14"><use href="#i-plus"/></svg>新增用户</span></div></div>
+      <div class="filters">
+        <div class="field"><label>姓名/账号</label><div class="input" style="width:180px;color:#8DA3A7">输入关键字</div></div>
+        <div class="field"><label>所属部门</label><div class="select"><b>全部部门</b><svg width="12" height="12"><use href="#i-arrow"/></svg></div></div>
+        <div class="field"><label>角色</label><div class="select" style="width:170px"><b>全部角色</b><svg width="12" height="12"><use href="#i-arrow"/></svg></div></div>
+        <div class="tail"><span class="btn ghost">重置</span><span class="btn primary">查询</span></div>
+      </div>
+      <div class="tbl-wrap">
+        <div class="tbl-head"><h3>用户清单</h3><span class="small muted">共 19 人</span></div>
+        <table>
+          <thead><tr><th style="width:56px" class="c">头像</th><th>姓名</th><th>登录账号</th><th>所属部门</th><th>角色</th><th>手机号</th><th class="c">状态</th><th class="nowrap">最后登录</th><th class="c">操作</th></tr></thead>
+          <tbody>
+            <tr><td class="c"><img src="../uploads/seed/avatar/01.jpg" style="width:30px;height:30px;border-radius:50%;object-fit:cover"></td><td>陈立</td><td class="muted">chenli</td><td>采购中心</td><td>采购专员</td><td class="num">138****2210</td><td class="c"><span class="tag ok">启用</span></td><td class="muted num">2026-10-31 09:12</td><td class="c nowrap"><a>编辑</a> <a>重置密码</a></td></tr>
+            <tr><td class="c"><img src="../uploads/seed/avatar/02.jpg" style="width:30px;height:30px;border-radius:50%;object-fit:cover"></td><td>林晓</td><td class="muted">linxiao</td><td>生产制造部</td><td>需求申请人</td><td class="num">139****3345</td><td class="c"><span class="tag ok">启用</span></td><td class="muted num">2026-10-31 08:40</td><td class="c nowrap"><a>编辑</a> <a>重置密码</a></td></tr>
+            <tr><td class="c"><img src="../uploads/seed/avatar/03.jpg" style="width:30px;height:30px;border-radius:50%;object-fit:cover"></td><td>周敏</td><td class="muted">zhoumin</td><td>生产制造部</td><td>部门负责人</td><td class="num">137****8891</td><td class="c"><span class="tag ok">启用</span></td><td class="muted num">2026-10-30 17:55</td><td class="c nowrap"><a>编辑</a> <a>重置密码</a></td></tr>
+            <tr><td class="c"><img src="../uploads/seed/avatar/04.jpg" style="width:30px;height:30px;border-radius:50%;object-fit:cover"></td><td>吴总</td><td class="muted">wuzong</td><td>财务中心</td><td>审批人</td><td class="num">136****1122</td><td class="c"><span class="tag ok">启用</span></td><td class="muted num">2026-10-30 15:20</td><td class="c nowrap"><a>编辑</a> <a>重置密码</a></td></tr>
+            <tr><td class="c"><img src="../uploads/seed/avatar/05.jpg" style="width:30px;height:30px;border-radius:50%;object-fit:cover"></td><td>赵磊</td><td class="muted">zhaolei</td><td>仓储物流部</td><td>仓管/验收人</td><td class="num">135****6677</td><td class="c"><span class="tag ok">启用</span></td><td class="muted num">2026-10-31 07:58</td><td class="c nowrap"><a>编辑</a> <a>重置密码</a></td></tr>
+            <tr><td class="c"><img src="../uploads/seed/avatar/06.jpg" style="width:30px;height:30px;border-radius:50%;object-fit:cover"></td><td>管理员</td><td class="muted">admin</td><td>信息中心</td><td>系统管理员</td><td class="num">130****0001</td><td class="c"><span class="tag ok">启用</span></td><td class="muted num">2026-10-31 10:02</td><td class="c nowrap"><a>编辑</a> <a>重置密码</a></td></tr>
+          </tbody>
+        </table>
+        <div class="tbl-foot"><span>共 19 条</span><div class="pager"><span class="pg">‹</span><span class="pg on">1</span><span class="pg">2</span><span class="pg">›</span></div></div>
+      </div>
+
+      <div class="panel mt16"><h4>菜单管理</h4>
+        <table>
+          <thead><tr><th>菜单名称</th><th>类型</th><th>路由 / 权限标识</th><th class="c">排序</th><th class="c">可见</th><th class="c">操作</th></tr></thead>
+          <tbody>
+            <tr><td>采购需求池</td><td>菜单</td><td class="muted">/requests · request:list</td><td class="c num">10</td><td class="c"><span class="tag ok">显示</span></td><td class="c nowrap"><a>编辑</a> <a>新增子项</a></td></tr>
+            <tr><td>询价比价单</td><td>菜单</td><td class="muted">/inquiry · inquiry:list</td><td class="c num">11</td><td class="c"><span class="tag ok">显示</span></td><td class="c nowrap"><a>编辑</a> <a>新增子项</a></td></tr>
+            <tr><td>综合比价矩阵</td><td>菜单</td><td class="muted">/comparison · compare:view</td><td class="c num">12</td><td class="c"><span class="tag ok">显示</span></td><td class="c nowrap"><a>编辑</a> <a>新增子项</a></td></tr>
+            <tr><td>比价规则配置</td><td>菜单</td><td class="muted">/rules · rule:config</td><td class="c num">13</td><td class="c"><span class="tag ok">显示</span></td><td class="c nowrap"><a>编辑</a> <a>新增子项</a></td></tr>
+            <tr><td>菜单管理</td><td>菜单</td><td class="muted">/menus · menu:manage</td><td class="c num">99</td><td class="c"><span class="tag gray">仅管理员</span></td><td class="c nowrap"><a>编辑</a> <a>新增子项</a></td></tr>
+          </tbody>
+        </table>
+        <div class="notice mt16">「菜单管理」为管理员专属，在「为角色分配菜单」中不向其他角色展示（需求第 12 条）。</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+<script>Mock.shell('buyer','users','系统 / <b>用户与菜单管理</b>')</script>
+</body>
+</html>

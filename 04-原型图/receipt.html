@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>到货验收 · 设计稿</title><link rel="stylesheet" href="mock.css"></head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sb"></aside>
+  <div class="main">
+    <header class="topbar" id="tb"></header>
+    <div class="content">
+      <div class="page-head"><h1>到货验收</h1><span class="sub">PO2026100018 · 华科电子 · 第 3 批</span>
+        <div class="actions"><span class="btn ghost">打印验收单</span><span class="btn primary">提交验收结果</span></div></div>
+
+      <div class="grid g4">
+        <div class="kpi"><div class="lb">本批到货明细</div><div class="v">3<small>项</small></div><div class="df">合计 16 件</div></div>
+        <div class="kpi"><div class="lb">合格数</div><div class="v">14<small>件</small></div><div class="df">合格率 87.5%</div></div>
+        <div class="kpi"><div class="lb">不合格数</div><div class="v" style="color:#A62B32">2<small>件</small></div><div class="df">需转退货</div></div>
+        <div class="kpi"><div class="lb">验收照片</div><div class="v">4<small>张</small></div><div class="df">已上传本地存储</div></div>
+      </div>
+
+      <div class="grid g-2-1 mt16">
+        <div class="panel"><h4>验收登记</h4>
+          <table>
+            <thead><tr><th>物料</th><th class="r">待到货</th><th class="r">本次到货</th><th class="r">合格数</th><th class="r">不合格数</th><th>不合格原因</th></tr></thead>
+            <tbody>
+              <tr><td>工业级伺服电机 750W</td><td class="r num">4</td><td class="r num">4</td><td class="r num">4</td><td class="r num">0</td><td class="muted">—</td></tr>
+              <tr><td>编码器线缆 10m</td><td class="r num">2</td><td class="r num">2</td><td class="r num">0</td><td class="r num">2</td><td>外皮破损，屏蔽层外露</td></tr>
+              <tr><td>制动电阻 200W</td><td class="r num">10</td><td class="r num">10</td><td class="r num">10</td><td class="r num">0</td><td class="muted">—</td></tr>
+            </tbody>
+          </table>
+          <div class="grid g2 mt16">
+            <div><div class="small muted" style="margin-bottom:6px">检验结论</div>
+              <div class="select"><b>部分合格</b><svg width="12" height="12"><use href="#i-arrow"/></svg></div></div>
+            <div><div class="small muted" style="margin-bottom:6px">到货日期</div><div class="input">2026-11-08</div></div>
+          </div>
+          <div class="mt16"><div class="small muted" style="margin-bottom:6px">验收说明</div>
+            <div class="input" style="height:64px;align-items:flex-start;padding-top:8px;color:#5B7176">线缆 2 根外观破损，拍照留证并转入退货流程；其余数量验收合格。</div></div>
+          <div class="mt16"><div class="small muted" style="margin-bottom:6px">验收图片（上传组件，≤5MB/张）</div>
+            <div style="display:flex;gap:10px">
+              <div style="width:92px;height:70px;border:1px dashed #CFE0E1;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#8DA3A7;font-size:11px">+ 上传</div>
+              <div style="width:92px;height:70px;border-radius:6px;background:#E8F1F1;border:1px solid #DCE7E7;display:flex;align-items:flex-end;justify-content:center;font-size:11px;color:#5B7176;padding-bottom:4px">01.jpg</div>
+              <div style="width:92px;height:70px;border-radius:6px;background:#E8F1F1;border:1px solid #DCE7E7;display:flex;align-items:flex-end;justify-content:center;font-size:11px;color:#5B7176;padding-bottom:4px">02.jpg</div>
+              <div style="width:92px;height:70px;border-radius:6px;background:#E8F1F1;border:1px solid #DCE7E7;display:flex;align-items:flex-end;justify-content:center;font-size:11px;color:#5B7176;padding-bottom:4px">03.jpg</div>
+            </div></div>
+        </div>
+        <div>
+          <div class="panel"><h4>退货登记</h4>
+            <table>
+              <thead><tr><th>物料</th><th class="r">数量</th><th>处理方式</th><th class="c">状态</th></tr></thead>
+              <tbody><tr><td>编码器线缆 10m</td><td class="r num">2</td><td>换货</td><td class="c"><span class="tag warn">待供应商确认</span></td></tr></tbody>
+            </table>
+            <div class="small muted mt16">不合格数量自动生成退货记录，原明细保持「待到货」，换货到货后重新验收。</div>
+          </div>
+          <div class="panel mt16"><h4>验收时间轴</h4>
+            <div class="tl">
+              <div class="ev cur"><div class="t">登记验收结果<span class="tag warn">部分合格</span></div><div class="m">2026-11-08 10:20:41 · 赵磊</div><div class="why">2 根线缆破损，转退货。</div></div>
+              <div class="ev"><div class="t">到货签收</div><div class="m">2026-11-08 09:42:03 · 赵磊</div></div>
+              <div class="ev"><div class="t">供应商发货</div><div class="m">2026-11-05 15:10:00 · 华科电子</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+<script>Mock.shell('warehouse','receipt','到货验收 / <b>验收登记</b>')</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>比价规则配置 · 设计稿</title><link rel="stylesheet" href="mock.css"></head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sb"></aside>
+  <div class="main">
+    <header class="topbar" id="tb"></header>
+    <div class="content">
+      <div class="page-head"><h1>比价规则配置</h1><span class="sub">可解释的综合比价 · 权重合计必须等于 100%</span>
+        <div class="actions"><span class="btn ghost">查看历史版本</span><span class="btn primary">保存并启用新版本</span></div></div>
+
+      <div class="grid g-2-1">
+        <div class="panel"><h4>当前生效规则 v3 · 2026-09-01 生效</h4>
+          <table>
+            <thead><tr><th>因素</th><th>数据来源</th><th class="c">权重</th><th>缺失处理</th><th class="c">允许调整</th></tr></thead>
+            <tbody>
+              <tr><td>报价金额</td><td>报价明细汇总</td><td class="c"><div class="input w120" style="height:28px;min-width:80px;width:80px;margin:0 auto">35%</div></td><td>缺失则不参与计算并提示补录</td><td class="c"><input type="checkbox" checked></td></tr>
+              <tr><td>交付天数</td><td>供应商报价条件</td><td class="c"><div class="input" style="height:28px;width:80px;margin:0 auto">15%</div></td><td>缺失则不参与计算并提示补录</td><td class="c"><input type="checkbox" checked></td></tr>
+              <tr><td>质量评分</td><td>供应商历史绩效</td><td class="c"><div class="input" style="height:28px;width:80px;margin:0 auto">20%</div></td><td>无历史数据按 70 分兜底并标注</td><td class="c"><input type="checkbox" checked></td></tr>
+              <tr><td>历史准时率</td><td>验收记录统计</td><td class="c"><div class="input" style="height:28px;width:80px;margin:0 auto">15%</div></td><td>无历史数据按 80% 兜底并标注</td><td class="c"><input type="checkbox" checked></td></tr>
+              <tr><td>付款条件</td><td>报价条件映射</td><td class="c"><div class="input" style="height:28px;width:80px;margin:0 auto">10%</div></td><td>缺失按 70 分兜底并标注</td><td class="c"><input type="checkbox" checked></td></tr>
+              <tr><td>售后评分</td><td>供应商评级</td><td class="c"><div class="input" style="height:28px;width:80px;margin:0 auto">5%</div></td><td>缺失按 70 分兜底并标注</td><td class="c"><input type="checkbox" checked></td></tr>
+              <tr style="background:#F3F8F8"><td><b>合计</b></td><td></td><td class="c"><b class="num">100%</b></td><td class="muted">校验通过</td><td></td></tr>
+            </tbody>
+          </table>
+          <div class="hr"></div>
+          <div class="grid g3">
+            <div><div class="small muted">推荐阈值（≥）</div><div class="input">80 分</div></div>
+            <div><div class="small muted">可选阈值（≥）</div><div class="input">70 分</div></div>
+            <div><div class="small muted">偏离建议必填原因</div><div class="input">是</div></div>
+          </div>
+          <div class="notice mt16">保存新版本不影响历史计算结果；如需让历史单据使用新规则，必须在单据内主动点「重新计算」，系统会新增一条计算快照并保留原结果。</div>
+        </div>
+        <div>
+          <div class="panel"><h4>权重分布</h4>
+            <div class="factor"><span class="nm">报价金额</span><span class="tr"><i style="width:35%"></i></span><span class="vv num">35%</span></div>
+            <div class="factor"><span class="nm">交付天数</span><span class="tr"><i style="width:15%"></i></span><span class="vv num">15%</span></div>
+            <div class="factor"><span class="nm">质量评分</span><span class="tr"><i style="width:20%"></i></span><span class="vv num">20%</span></div>
+            <div class="factor"><span class="nm">历史准时率</span><span class="tr"><i style="width:15%"></i></span><span class="vv num">15%</span></div>
+            <div class="factor"><span class="nm">付款条件</span><span class="tr"><i style="width:10%"></i></span><span class="vv num">10%</span></div>
+            <div class="factor"><span class="nm">售后评分</span><span class="tr"><i style="width:5%"></i></span><span class="vv num">5%</span></div>
+            <div class="hr"></div>
+            <div class="small muted">付款条件映射：预付 30% → 60 分；货到付款 → 75 分；月结 30 天 → 85 分；月结 60 天 → 90 分；月结 90 天 → 100 分。</div>
+          </div>
+          <div class="panel mt16"><h4>版本记录</h4>
+            <table>
+              <thead><tr><th>版本</th><th>生效时间</th><th class="c">状态</th><th>修改人</th></tr></thead>
+              <tbody>
+                <tr><td>v3</td><td class="num">2026-09-01 00:00</td><td class="c"><span class="tag ok">生效中</span></td><td>陈立</td></tr>
+                <tr><td>v2</td><td class="num">2026-06-01 00:00</td><td class="c"><span class="tag gray">已归档</span></td><td>陈立</td></tr>
+                <tr><td>v1</td><td class="num">2026-03-01 00:00</td><td class="c"><span class="tag gray">已归档</span></td><td>系统</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+<script>Mock.shell('buyer','rules','决策与执行 / <b>比价规则配置</b>')</script>
+</body>
+</html>

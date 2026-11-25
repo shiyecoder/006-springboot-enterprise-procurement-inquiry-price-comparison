@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>采购单管理 · 设计稿</title><link rel="stylesheet" href="mock.css"></head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sb"></aside>
+  <div class="main">
+    <header class="topbar" id="tb"></header>
+    <div class="content">
+      <div class="page-head">
+        <h1>采购单管理</h1><span class="sub">执行中 11 张 · 待结单 3 张</span>
+        <div class="actions"><span class="btn ghost"><svg width="14" height="14"><use href="#i-export"/></svg>导出</span><span class="btn primary">新建采购单</span></div>
+      </div>
+      <div class="filters">
+        <div class="field"><label>采购单号</label><div class="input" style="width:180px;color:#8DA3A7">PO2026…</div></div>
+        <div class="field"><label>供应商</label><div class="select"><b>全部</b><svg width="12" height="12"><use href="#i-arrow"/></svg></div></div>
+        <div class="field"><label>交货日期</label><div class="input" style="width:200px;color:#8DA3A7">2026-10-01 至 2026-12-31</div></div>
+        <div class="field"><label>执行状态</label><div class="select" style="width:180px"><b>全部</b><svg width="12" height="12"><use href="#i-arrow"/></svg></div></div>
+        <div class="tail"><span class="btn ghost">重置</span><span class="btn primary">查询</span></div>
+      </div>
+      <div class="tbl-wrap">
+        <div class="tbl-head"><h3>采购单列表</h3>
+          <div class="tabs"><span class="tab on">全部 36</span><span class="tab">待下单 4</span><span class="tab">执行中 11</span><span class="tab">部分到货 6</span><span class="tab">待结单 3</span><span class="tab">已完成 12</span></div>
+        </div>
+        <table>
+          <thead><tr><th class="nowrap">采购单号</th><th>供应商</th><th class="nowrap">关联询价</th><th class="r nowrap">含税金额</th>
+            <th class="r nowrap">税额</th><th class="nowrap">交货日期</th><th class="c nowrap">到货进度</th><th class="c nowrap">状态</th><th class="nowrap">联系人</th><th class="c nowrap">操作</th></tr></thead>
+          <tbody>
+            <tr><td class="code nowrap">PO2026100018</td><td>华科电子</td><td><a>INQ2026100008</a></td><td class="r num">￥110,240.00</td><td class="r num">￥12,680.00</td><td class="nowrap">2026-11-12</td>
+              <td class="c"><div class="scorebar" style="width:56px"><i style="width:60%"></i></div> <span class="num">60%</span></td>
+              <td class="c"><span class="tag blue">部分到货</span></td><td>王经理</td><td class="c nowrap"><a>查看</a> <a>验收</a></td></tr>
+            <tr><td class="code nowrap">PO2026100017</td><td>恒昌机电</td><td><a>INQ2026100008</a></td><td class="r num">￥11,920.00</td><td class="r num">￥1,371.00</td><td class="nowrap">2026-11-05</td>
+              <td class="c"><div class="scorebar" style="width:56px"><i style="width:0%"></i></div> <span class="num">0%</span></td>
+              <td class="c"><span class="tag info">执行中</span></td><td>李工</td><td class="c nowrap"><a>查看</a> <a>催货</a></td></tr>
+            <tr><td class="code nowrap">PO2026100016</td><td>瑞丰物资</td><td><a>INQ2026100007</a></td><td class="r num">￥36,480.00</td><td class="r num">￥4,195.00</td><td class="nowrap">2026-10-30</td>
+              <td class="c"><div class="scorebar" style="width:56px"><i style="width:100%"></i></div> <span class="num">100%</span></td>
+              <td class="c"><span class="tag ok">已完成</span></td><td>张主管</td><td class="c nowrap"><a>查看</a> <a>结单</a></td></tr>
+            <tr><td class="code nowrap">PO2026100015</td><td>联信办公</td><td><a>INQ2026100006</a></td><td class="r num">￥6,580.00</td><td class="r num">￥757.00</td><td class="nowrap">2026-10-26</td>
+              <td class="c"><div class="scorebar" style="width:56px"><i style="width:100%"></i></div> <span class="num">100%</span></td>
+              <td class="c"><span class="tag blue">待结单</span></td><td>刘女士</td><td class="c nowrap"><a>查看</a> <a>确认结单</a></td></tr>
+            <tr><td class="code nowrap">PO2026100014</td><td>达成劳保</td><td><a>INQ2026100004</a></td><td class="r num">￥9,120.00</td><td class="r num">￥1,049.00</td><td class="nowrap">2026-10-24</td>
+              <td class="c"><div class="scorebar" style="width:56px"><i style="width:75%"></i></div> <span class="num">75%</span></td>
+              <td class="c"><span class="tag blue">部分到货</span></td><td>孙经理</td><td class="c nowrap"><a>查看</a> <a>验收</a></td></tr>
+            <tr><td class="code nowrap">PO2026100013</td><td>华科电子</td><td><a>INQ2026100003</a></td><td class="r num">￥42,600.00</td><td class="r num">￥4,900.00</td><td class="nowrap">2026-11-20</td>
+              <td class="c"><div class="scorebar" style="width:56px"><i style="width:0%"></i></div> <span class="num">0%</span></td>
+              <td class="c"><span class="tag gray">待下单</span></td><td>王经理</td><td class="c nowrap"><a>查看</a> <a>下单</a></td></tr>
+            <tr><td class="code nowrap">PO2026100012</td><td>恒昌机电</td><td><a>INQ2026100002</a></td><td class="r num">￥78,300.00</td><td class="r num">￥9,006.00</td><td class="nowrap">2026-10-18</td>
+              <td class="c"><div class="scorebar" style="width:56px"><i style="width:100%"></i></div> <span class="num">100%</span></td>
+              <td class="c"><span class="tag ok">已完成</span></td><td>李工</td><td class="c nowrap"><a>查看</a></td></tr>
+          </tbody>
+        </table>
+        <div class="tbl-foot"><span>共 36 条</span><div class="pager"><span class="pg">‹</span><span class="pg on">1</span><span class="pg">2</span><span class="pg">3</span><span class="pg">4</span><span class="pg">›</span></div></div>
+      </div>
+
+      <div class="panel mt16">
+        <h4>采购单 PO2026100018 · 明细与到货</h4>
+        <table>
+          <thead><tr><th>物料</th><th class="c">单位</th><th class="r">订单数量</th><th class="r">已合格</th><th class="r">不合格</th><th class="r">待到货</th><th class="r">单价</th><th class="c">状态</th></tr></thead>
+          <tbody>
+            <tr><td>工业级伺服电机 750W</td><td class="c">台</td><td class="r num">12</td><td class="r num">8</td><td class="r num">0</td><td class="r num">4</td><td class="r num">￥7,850.00</td><td class="c"><span class="tag blue">部分到货</span></td></tr>
+            <tr><td>伺服驱动器 3kW</td><td class="c">台</td><td class="r num">8</td><td class="r num">8</td><td class="r num">0</td><td class="r num">0</td><td class="r num">￥3,120.00</td><td class="c"><span class="tag ok">已到货</span></td></tr>
+            <tr><td>编码器线缆 10m</td><td class="c">根</td><td class="r num">12</td><td class="r num">10</td><td class="r num">2</td><td class="r num">0</td><td class="r num">￥260.00</td><td class="c"><span class="tag bad">有不合格</span></td></tr>
+          </tbody>
+        </table>
+        <div class="flex mt16"><span class="tag bad">2 根线缆外观破损，已登记退货</span><span class="right small muted">分批到货：2026-11-02 / 2026-11-08 两批</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+<script>Mock.shell('buyer','orders','决策与执行 / <b>采购单管理</b>')</script>
+</body>
+</html>

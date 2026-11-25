@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>角色与菜单权限 · 设计稿</title><link rel="stylesheet" href="mock.css"></head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sb"></aside>
+  <div class="main">
+    <header class="topbar" id="tb"></header>
+    <div class="content">
+      <div class="page-head"><h1>角色管理</h1><span class="sub">菜单权限 + 按钮权限 + 数据范围分别控制</span>
+        <div class="actions"><span class="btn primary"><svg width="14" height="14"><use href="#i-plus"/></svg>新增角色</span></div></div>
+
+      <div class="grid g-2-1">
+        <div class="tbl-wrap">
+          <div class="tbl-head"><h3>角色列表</h3></div>
+          <table>
+            <thead><tr><th>角色名称</th><th>角色编码</th><th class="c">用户数</th><th>数据范围</th><th class="c">状态</th><th class="c">操作</th></tr></thead>
+            <tbody>
+              <tr><td>系统管理员</td><td class="muted">ADMIN</td><td class="c num">1</td><td>全部数据</td><td class="c"><span class="tag ok">启用</span></td><td class="c nowrap"><a>分配菜单</a> <a>编辑</a></td></tr>
+              <tr><td>需求申请人</td><td class="muted">REQUESTER</td><td class="c num">6</td><td>本人数据</td><td class="c"><span class="tag ok">启用</span></td><td class="c nowrap"><a>分配菜单</a> <a>编辑</a></td></tr>
+              <tr><td>部门负责人</td><td class="muted">DEPT_HEAD</td><td class="c num">4</td><td>本部门数据</td><td class="c"><span class="tag ok">启用</span></td><td class="c nowrap"><a>分配菜单</a> <a>编辑</a></td></tr>
+              <tr><td>采购专员</td><td class="muted">BUYER</td><td class="c num">3</td><td>采购中心数据</td><td class="c"><span class="tag ok">启用</span></td><td class="c nowrap"><a>分配菜单</a> <a>编辑</a></td></tr>
+              <tr><td>审批人</td><td class="muted">APPROVER</td><td class="c num">2</td><td>授权组织范围</td><td class="c"><span class="tag ok">启用</span></td><td class="c nowrap"><a>分配菜单</a> <a>编辑</a></td></tr>
+              <tr><td>仓管/验收人</td><td class="muted">WAREHOUSE</td><td class="c num">3</td><td>仓储物流部</td><td class="c"><span class="tag ok">启用</span></td><td class="c nowrap"><a>分配菜单</a> <a>编辑</a></td></tr>
+            </tbody>
+          </table>
+          <div class="tbl-foot"><span>共 6 条</span></div>
+        </div>
+
+        <div class="panel">
+          <h4>为「采购专员」分配菜单</h4>
+          <div class="small muted" style="margin-bottom:10px">仅勾选菜单权限不足，写接口仍需按钮权限校验。</div>
+          <div style="font-size:13px;line-height:30px">
+            <div><input type="checkbox" checked> 工作台 <span class="muted small">/ 采购分析看板</span></div>
+            <div style="padding-left:20px"><input type="checkbox" checked> 需求管理 <span class="muted small">/ 采购需求池</span></div>
+            <div style="padding-left:40px"><input type="checkbox" checked> 新建需求 <span class="muted small">（按钮）</span></div>
+            <div style="padding-left:40px"><input type="checkbox" checked> 发起询价 <span class="muted small">（按钮）</span></div>
+            <div style="padding-left:20px"><input type="checkbox" checked> 询价管理 <span class="muted small">/ 询价比价单</span></div>
+            <div style="padding-left:20px"><input type="checkbox" checked> 询价管理 <span class="muted small">/ 供应商报价台</span></div>
+            <div style="padding-left:20px"><input type="checkbox" checked> 比价管理 <span class="muted small">/ 综合比价矩阵</span></div>
+            <div style="padding-left:20px"><input type="checkbox" checked> 比价管理 <span class="muted small">/ 比价规则配置</span></div>
+            <div style="padding-left:20px"><input type="checkbox" checked> 采购执行 <span class="muted small">/ 采购单管理</span></div>
+            <div style="padding-left:20px"><input type="checkbox" checked> 采购执行 <span class="muted small">/ 到货验收</span></div>
+            <div style="padding-left:20px"><input type="checkbox" checked> 基础数据 <span class="muted small">/ 物料档案</span></div>
+            <div style="padding-left:20px"><input type="checkbox" checked> 基础数据 <span class="muted small">/ 供应商档案</span></div>
+            <div><input type="checkbox" checked> 系统管理 <span class="muted small">/ 用户管理</span></div>
+            <div><input type="checkbox" checked> 系统管理 <span class="muted small">/ 角色管理</span></div>
+            <div class="muted"><input type="checkbox" disabled> 系统管理 <span class="small">/ 菜单管理（本角色不可见，已隐藏）</span></div>
+          </div>
+          <div class="flex mt16"><span class="btn primary">保存权限</span><span class="btn ghost">重置</span><span class="right small muted">菜单按角色动态下发，登录后由 /api/auth/menus 返回</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+<script>Mock.shell('buyer','roles','系统 / <b>角色管理</b>')</script>
+</body>
+</html>

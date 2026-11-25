@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>采购需求池 · 设计稿</title>
+<link rel="stylesheet" href="mock.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sb"></aside>
+  <div class="main">
+    <header class="topbar" id="tb"></header>
+    <div class="content">
+      <div class="page-head">
+        <h1>采购需求池</h1>
+        <span class="sub">共 128 条需求 · 待归并 9 条</span>
+        <div class="actions">
+          <span class="btn ghost"><svg width="14" height="14"><use href="#i-export"/></svg>导出当前筛选</span>
+          <span class="btn ghost">高级筛选</span>
+          <span class="btn primary"><svg width="14" height="14"><use href="#i-plus"/></svg>新建需求</span>
+        </div>
+      </div>
+
+      <div class="filters">
+        <div class="field"><label>需求编号</label><div class="input" style="width:170px;color:#8DA3A7">如 PR2026100012</div></div>
+        <div class="field"><label>申请部门</label><div class="select"><b>生产制造部</b><svg width="12" height="12"><use href="#i-arrow"/></svg></div></div>
+        <div class="field"><label>物料分类</label><div class="select"><b>全部</b><svg width="12" height="12"><use href="#i-arrow"/></svg></div></div>
+        <div class="field"><label>金额区间</label><div class="input w120">0</div><span class="muted">—</span><div class="input w120">200000</div></div>
+        <div class="field"><label>期望到货</label><div class="input" style="width:210px;color:#8DA3A7">2026-09-01 至 2026-12-31</div></div>
+        <div class="field"><label>审批状态</label><div class="select" style="width:180px"><b>全部状态</b><svg width="12" height="12"><use href="#i-arrow"/></svg></div></div>
+        <div class="tail"><span class="btn ghost">重置</span><span class="btn primary">查询</span></div>
+      </div>
+
+      <div class="tbl-wrap">
+        <div class="tbl-head">
+          <h3>需求清单</h3>
+          <div class="tabs">
+            <span class="tab on">全部 128</span><span class="tab">待我审批 4</span><span class="tab">待归并 9</span><span class="tab">已询价 46</span><span class="tab">已退回 3</span>
+          </div>
+          <div class="r"><span class="btn ghost sm">批量归并</span><span class="btn ghost sm" style="opacity:.55">批量审批</span></div>
+        </div>
+        <table>
+          <thead><tr>
+            <th style="width:34px"><input type="checkbox"></th>
+            <th class="nowrap">需求编号</th><th>申请部门</th><th>物料名称 / 规格</th><th class="nowrap">数量</th>
+            <th class="r nowrap">预算金额</th><th class="nowrap">期望到货</th><th class="c nowrap">紧急程度</th><th class="c nowrap">审批状态</th>
+            <th class="nowrap">申请人</th><th class="nowrap">创建时间</th><th class="c nowrap">操作</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td class="code nowrap">PR2026100012</td><td>生产制造部</td>
+              <td>工业级伺服电机 <span class="muted">/ 750W 220V</span></td><td class="num">12 台</td>
+              <td class="r num">￥86,400.00</td><td class="nowrap">2026-11-20</td><td class="c"><span class="tag bad"><span class="dot-s"></span>加急</span></td>
+              <td class="c"><span class="tag warn">待部门审批</span></td><td>林晓</td><td class="muted nowrap">2026-10-29 09:12:33</td>
+              <td class="c nowrap"><a>查看</a> <a>审批</a> <a>更多</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" checked></td>
+              <td class="code nowrap">PR2026100011</td><td>研发中心</td>
+              <td>示波器 <span class="muted">/ 200MHz 四通道</span></td><td class="num">3 台</td>
+              <td class="r num">￥52,800.00</td><td class="nowrap">2026-11-15</td><td class="c"><span class="tag warn">普通</span></td>
+              <td class="c"><span class="tag info">待采购</span></td><td>黄婷</td><td class="muted nowrap">2026-10-28 16:40:05</td>
+              <td class="c nowrap"><a>查看</a> <a>发起询价</a> <a>更多</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" checked></td>
+              <td class="code nowrap">PR2026100010</td><td>生产制造部</td>
+              <td>不锈钢法兰 <span class="muted">/ DN100 PN16</span></td><td class="num">240 件</td>
+              <td class="r num">￥38,160.00</td><td class="nowrap">2026-11-10</td><td class="c"><span class="tag warn">普通</span></td>
+              <td class="c"><span class="tag info">待采购</span></td><td>林晓</td><td class="muted nowrap">2026-10-28 10:05:21</td>
+              <td class="c nowrap"><a>查看</a> <a>发起询价</a> <a>更多</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td class="code nowrap">PR2026100009</td><td>行政后勤部</td>
+              <td>A4 复印纸 <span class="muted">/ 70g 500张/包</span></td><td class="num">300 包</td>
+              <td class="r num">￥6,900.00</td><td class="nowrap">2026-11-05</td><td class="c"><span class="tag gray">不急</span></td>
+              <td class="c"><span class="tag ok">已询价</span></td><td>徐蕾</td><td class="muted nowrap">2026-10-27 14:22:48</td>
+              <td class="c nowrap"><a>查看</a> <a>关联单据</a> <a>更多</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td class="code nowrap">PR2026100008</td><td>质量管理部</td>
+              <td>三坐标测针 <span class="muted">/ Φ2×20mm</span></td><td class="num">40 支</td>
+              <td class="r num">￥18,600.00</td><td class="nowrap">2026-11-08</td><td class="c"><span class="tag warn">普通</span></td>
+              <td class="c"><span class="tag ok">已完成</span></td><td>郑凯</td><td class="muted nowrap">2026-10-24 11:08:16</td>
+              <td class="c nowrap"><a>查看</a> <a>关联单据</a> <a>更多</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td class="code nowrap">PR2026100007</td><td>生产制造部</td>
+              <td>液压油 <span class="muted">/ 46# 抗磨 200L</span></td><td class="num">18 桶</td>
+              <td class="r num">￥27,000.00</td><td class="nowrap">2026-10-30</td><td class="c"><span class="tag bad"><span class="dot-s"></span>加急</span></td>
+              <td class="c"><span class="tag bad">已退回</span></td><td>林晓</td><td class="muted nowrap">2026-10-22 09:31:02</td>
+              <td class="c nowrap"><a>查看</a> <a>重新提交</a> <a>更多</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td class="code nowrap">PR2026100006</td><td>信息中心</td>
+              <td>机架式服务器 <span class="muted">/ 2U 双路 64G</span></td><td class="num">2 台</td>
+              <td class="r num">￥196,000.00</td><td class="nowrap">2026-12-01</td><td class="c"><span class="tag warn">普通</span></td>
+              <td class="c"><span class="tag warn">待部门审批</span></td><td>马涛</td><td class="muted nowrap">2026-10-21 15:47:29</td>
+              <td class="c nowrap"><a>查看</a> <a>审批</a> <a>更多</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td class="code nowrap">PR2026100005</td><td>研发中心</td>
+              <td>3D 打印耗材 <span class="muted">/ PLA 1.75mm</span></td><td class="num">60 卷</td>
+              <td class="r num">￥9,600.00</td><td class="nowrap">2026-10-28</td><td class="c"><span class="tag gray">不急</span></td>
+              <td class="c"><span class="tag ok">已询价</span></td><td>黄婷</td><td class="muted nowrap">2026-10-19 10:16:44</td>
+              <td class="c nowrap"><a>查看</a> <a>关联单据</a> <a>更多</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td class="code nowrap">PR2026100004</td><td>行政后勤部</td>
+              <td>员工工装 <span class="muted">/ 春秋款 定制</span></td><td class="num">160 套</td>
+              <td class="r num">￥44,800.00</td><td class="nowrap">2026-11-25</td><td class="c"><span class="tag warn">普通</span></td>
+              <td class="c"><span class="tag gray">草稿</span></td><td>徐蕾</td><td class="muted nowrap">2026-10-18 17:02:10</td>
+              <td class="c nowrap"><a>查看</a> <a>编辑</a> <a>更多</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td class="code nowrap">PR2026100003</td><td>质量管理部</td>
+              <td>标准硬度块 <span class="muted">/ HRC 20-70</span></td><td class="num">6 套</td>
+              <td class="r num">￥12,300.00</td><td class="nowrap">2026-10-20</td><td class="c"><span class="tag gray">不急</span></td>
+              <td class="c"><span class="tag ok">已完成</span></td><td>郑凯</td><td class="muted nowrap">2026-10-15 09:20:37</td>
+              <td class="c nowrap"><a>查看</a> <a>关联单据</a> <a>更多</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="tbl-foot">
+          <span>共 128 条 · 已选 2 条</span>
+          <span class="muted" style="margin-left:12px">每页</span>
+          <div class="select" style="width:76px;min-width:76px;height:26px;margin-left:6px"><b>10</b><svg width="11" height="11"><use href="#i-arrow"/></svg></div>
+          <div class="pager">
+            <span class="pg">‹</span><span class="pg on">1</span><span class="pg">2</span><span class="pg">3</span><span class="pg">…</span><span class="pg">13</span><span class="pg">›</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel mt16">
+        <h4>选中需求的处理建议（批量归并）</h4>
+        <div class="grid g4">
+          <div><div class="small muted">可归并需求</div><div class="num" style="font-size:20px;font-weight:600">2 条</div></div>
+          <div><div class="small muted">合计预算</div><div class="num" style="font-size:20px;font-weight:600">￥90,960.00</div></div>
+          <div><div class="small muted">建议合并为</div><div style="font-size:20px;font-weight:600">1 张询价单</div></div>
+          <div><div class="small muted">说明</div><div class="small">同部门、同品类，可合并询价以提升议价能力</div></div>
+        </div>
+        <div class="notice mt16">归并后原始需求单保留并标记「已归并」，询价单与需求单保持多对一关联，取消归并需填写原因（不少于 5 字）。</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+<script>Mock.shell('buyer','requests','需求与询价 / <b>采购需求池</b>')</script>
+</body>
+</html>

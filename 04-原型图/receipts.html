@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>验收记录 · 设计稿</title><link rel="stylesheet" href="mock.css"></head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sb"></aside>
+  <div class="main"><header class="topbar" id="tb"></header>
+    <div class="content">
+      <div class="page-head"><h1>验收记录</h1><span class="sub">按采购单与批号追溯</span></div>
+      <div class="grid g4">
+        <div class="kpi"><div class="lb">本月验收批次</div><div class="v">26<small>批</small></div><div class="df">涉及 9 张采购单</div></div>
+        <div class="kpi"><div class="lb">验收合格率</div><div class="v">96.4<small>%</small></div><div class="df">环比 +1.2pt</div></div>
+        <div class="kpi"><div class="lb">不合格品</div><div class="v" style="color:#A62B32">14<small>件</small></div><div class="df">已全部登记退货</div></div>
+        <div class="kpi"><div class="lb">平均验收时长</div><div class="v">0.6<small>天</small></div><div class="df">到货至登记</div></div>
+      </div>
+      <div class="tbl-wrap mt16">
+        <div class="tbl-head"><h3>验收批次</h3><div class="tabs"><span class="tab on">全部 26</span><span class="tab">合格 22</span><span class="tab">部分合格 3</span><span class="tab">不合格 1</span></div></div>
+        <table>
+          <thead><tr><th class="nowrap">验收单号</th><th class="nowrap">采购单号</th><th>供应商</th><th class="c nowrap">批次</th><th class="r">到货数</th>
+            <th class="r">合格</th><th class="r">不合格</th><th class="c">结论</th><th class="nowrap">验收人</th><th class="nowrap">验收时间</th><th class="c">操作</th></tr></thead>
+          <tbody>
+            <tr><td class="code nowrap">RC2026110007</td><td><a>PO2026100018</a></td><td>华科电子</td><td class="c num">第 3 批</td><td class="r num">16</td><td class="r num">14</td><td class="r num" style="color:#A62B32">2</td><td class="c"><span class="tag warn">部分合格</span></td><td>赵磊</td><td class="muted num">2026-11-08 10:20</td><td class="c nowrap"><a>查看</a> <a>退货</a></td></tr>
+            <tr><td class="code nowrap">RC2026110006</td><td><a>PO2026100018</a></td><td>华科电子</td><td class="c num">第 2 批</td><td class="r num">8</td><td class="r num">8</td><td class="r num">0</td><td class="c"><span class="tag ok">合格</span></td><td>赵磊</td><td class="muted num">2026-11-02 09:35</td><td class="c nowrap"><a>查看</a></td></tr>
+            <tr><td class="code nowrap">RC2026100025</td><td><a>PO2026100015</a></td><td>联信办公</td><td class="c num">第 1 批</td><td class="r num">300</td><td class="r num">300</td><td class="r num">0</td><td class="c"><span class="tag ok">合格</span></td><td>赵磊</td><td class="muted num">2026-10-26 14:08</td><td class="c nowrap"><a>查看</a></td></tr>
+            <tr><td class="code nowrap">RC2026100024</td><td><a>PO2026100016</a></td><td>瑞丰物资</td><td class="c num">第 2 批</td><td class="r num">120</td><td class="r num">120</td><td class="r num">0</td><td class="c"><span class="tag ok">合格</span></td><td>赵磊</td><td class="muted num">2026-10-30 11:22</td><td class="c nowrap"><a>查看</a></td></tr>
+            <tr><td class="code nowrap">RC2026100023</td><td><a>PO2026100014</a></td><td>达成劳保</td><td class="c num">第 1 批</td><td class="r num">120</td><td class="r num">108</td><td class="r num" style="color:#A62B32">12</td><td class="c"><span class="tag bad">不合格</span></td><td>赵磊</td><td class="muted num">2026-10-24 16:40</td><td class="c nowrap"><a>查看</a> <a>退货</a></td></tr>
+          </tbody>
+        </table>
+        <div class="tbl-foot"><span>共 26 条</span><div class="pager"><span class="pg">‹</span><span class="pg on">1</span><span class="pg">2</span><span class="pg">3</span><span class="pg">›</span></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+<script>Mock.shell('warehouse','receipts','到货验收 / <b>验收记录</b>')</script>
+</body>
+</html>

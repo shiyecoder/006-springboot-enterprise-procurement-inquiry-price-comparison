@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>综合比价矩阵 · 设计稿</title>
+<link rel="stylesheet" href="mock.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sb"></aside>
+  <div class="main">
+    <header class="topbar" id="tb"></header>
+    <div class="content">
+      <div class="page-head">
+        <h1>综合比价矩阵</h1>
+        <span class="sub">INQ2026100008 · 工业伺服电机等 3 项</span>
+        <div class="actions">
+          <span class="btn ghost">规则版本 v3（2026-09-01 生效）</span>
+          <span class="btn ghost"><svg width="14" height="14"><use href="#i-log"/></svg>计算留痕</span>
+          <span class="btn primary">提交定标审批</span>
+        </div>
+      </div>
+
+      <div class="card" style="padding:16px 18px">
+        <div class="flex" style="flex-wrap:wrap;gap:20px">
+          <div><div class="small muted">询价单编号</div><div class="code" style="font-weight:600">INQ2026100008</div></div>
+          <div><div class="small muted">关联需求</div><div><a>PR2026100011</a> · <a>PR2026100010</a></div></div>
+          <div><div class="small muted">责任人</div><div>陈立（采购中心）</div></div>
+          <div><div class="small muted">报价截止</div><div class="num">2026-10-27 18:00:00</div></div>
+          <div><div class="small muted">参与供应商</div><div>4 家 · 有效报价 4 份</div></div>
+          <div style="margin-left:auto"><div class="small muted">当前状态</div><span class="tag warn">待审批</span></div>
+        </div>
+        <div class="steps mt16">
+          <div class="st done"><b>✓</b>需求申请</div><div class="sep"></div>
+          <div class="st done"><b>✓</b>预算审批</div><div class="sep"></div>
+          <div class="st done"><b>✓</b>发布询价</div><div class="sep"></div>
+          <div class="st done"><b>✓</b>供应商报价</div><div class="sep"></div>
+          <div class="st cur"><b>5</b>比价定标</div><div class="sep"></div>
+          <div class="st"><b>6</b>采购完成</div>
+        </div>
+      </div>
+
+      <div class="grid g-2-1 mt16">
+        <div class="panel">
+          <h4>比价矩阵 · 横向对比</h4>
+          <table class="matrix">
+            <thead><tr>
+              <th class="nm">对比项</th>
+              <th>华科电子<div class="muted" style="font-weight:400">评级 A</div></th>
+              <th>恒昌机电<div class="muted" style="font-weight:400">评级 A-</div></th>
+              <th>瑞丰物资<div class="muted" style="font-weight:400">评级 B+</div></th>
+              <th>联信自动化<div class="muted" style="font-weight:400">评级 B</div></th>
+            </tr></thead>
+            <tbody>
+              <tr><td class="nm">报价总额（含税）</td><td class="num">￥138,600.00</td><td class="num best">￥131,200.00 <span class="tag ok" style="height:18px;font-size:11px">最低价</span></td><td class="num">￥142,800.00</td><td class="num">￥145,000.00</td></tr>
+              <tr><td class="nm">交付天数</td><td class="num">15 天</td><td class="num">28 天</td><td class="num">20 天</td><td class="num best">12 天</td></tr>
+              <tr><td class="nm">付款条件</td><td>月结 60 天</td><td>预付 30%</td><td>月结 30 天</td><td>货到付款</td></tr>
+              <tr><td class="nm">质保期</td><td>24 个月</td><td>12 个月</td><td>18 个月</td><td>12 个月</td></tr>
+              <tr><td class="nm">历史质量评分</td><td class="num">94</td><td class="num">86</td><td class="num">81</td><td class="num">88</td></tr>
+              <tr><td class="nm">历史准时率</td><td class="num">96%</td><td class="num">88%</td><td class="num">79%</td><td class="num">92%</td></tr>
+              <tr><td class="nm">售后响应评分</td><td class="num">90</td><td class="num">78</td><td class="num">72</td><td class="num">85</td></tr>
+              <tr style="border-top:2px solid #DCE7E7"><td class="nm"><b>综合得分</b></td>
+                <td class="rec"><span class="big num">88.4</span><span class="scorebar"><i style="width:88%"></i></span><div class="tag info" style="margin-top:6px">综合最优</div></td>
+                <td><span class="big num">79.1</span><span class="scorebar"><i style="width:79%"></i></span></td>
+                <td><span class="big num">74.6</span><span class="scorebar"><i style="width:75%"></i></span></td>
+                <td><span class="big num">82.3</span><span class="scorebar"><i style="width:82%"></i></span></td>
+              </tr>
+              <tr><td class="nm">结果等级</td><td><span class="tag ok">推荐</span></td><td><span class="tag gray">一般</span></td><td><span class="tag bad">不推荐</span></td><td><span class="tag info">可选</span></td></tr>
+            </tbody>
+          </table>
+          <div class="legend mt16" style="font-size:12px">
+            <span><i style="background:#E4F3EC"></i>单项最优</span>
+            <span><i style="background:#E8F1F1"></i>综合推荐</span>
+            <span>权重：价格 35 / 交付 15 / 质量 20 / 准时率 15 / 付款 10 / 售后 5</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="panel">
+            <h4>推荐结果与解释</h4>
+            <div class="flex" style="align-items:flex-start;gap:14px">
+              <div style="width:64px;height:64px;border-radius:8px;background:#E8F1F1;display:flex;flex-direction:column;align-items:center;justify-content:center">
+                <span class="num" style="font-size:22px;font-weight:600;color:#174A5C">88.4</span>
+                <span style="font-size:10px;color:#5B7176">综合得分</span>
+              </div>
+              <div>
+                <div style="font-size:15px;font-weight:600">推荐：华科电子</div>
+                <div class="small muted" style="margin-top:4px">虽非最低价（高出 ￥7,400.00，约 5.6%），但交付比最低价供应商快 13 天，历史质量与准时率显著更优，综合得分领先第二名 6.1 分。</div>
+              </div>
+            </div>
+            <div class="hr"></div>
+            <div class="small" style="font-weight:600;margin-bottom:10px">各项得分（百分制）</div>
+            <div class="factor"><span class="nm">价格 35%</span><span class="tr"><i style="width:92%"></i></span><span class="vv num">92.0</span></div>
+            <div class="factor"><span class="nm">交付 15%</span><span class="tr"><i style="width:80%"></i></span><span class="vv num">80.0</span></div>
+            <div class="factor"><span class="nm">质量 20%</span><span class="tr"><i style="width:94%"></i></span><span class="vv num">94.0</span></div>
+            <div class="factor"><span class="nm">准时率 15%</span><span class="tr"><i style="width:96%"></i></span><span class="vv num">96.0</span></div>
+            <div class="factor"><span class="nm">付款 10%</span><span class="tr"><i style="width:90%"></i></span><span class="vv num">90.0</span></div>
+            <div class="factor"><span class="nm">售后 5%</span><span class="tr"><i style="width:90%"></i></span><span class="vv num">90.0</span></div>
+            <div class="hr"></div>
+            <div class="small"><b>主要影响因素</b></div>
+            <div class="small muted" style="margin-top:6px">价格高于最低价 5.6%；交付周期优于最低价方案 46%；质量评分领先 8 分。</div>
+            <div class="small mt16"><b>未满足条件</b></div>
+            <div class="small muted" style="margin-top:6px">无。全部必填因素均有数据且满足准入要求。</div>
+            <div class="small mt16"><b>可改进项</b></div>
+            <div class="small muted" style="margin-top:6px">可将付款条件由月结 60 天调整为月结 30 天，预计再降 1.8 分成本的等价收益。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid g2 mt16">
+        <div class="panel">
+          <h4>定标方案（按明细分配）</h4>
+          <table>
+            <thead><tr><th>明细物料</th><th class="r">需求数量</th><th class="r">本次分配</th><th class="nowrap">中标供应商</th><th class="r">含税单价</th></tr></thead>
+            <tbody>
+              <tr><td>工业级伺服电机 <span class="muted">750W</span></td><td class="r num">12 台</td><td class="r num">12 台</td><td>华科电子</td><td class="r num">￥7,850.00</td></tr>
+              <tr><td>伺服驱动器 <span class="muted">配套</span></td><td class="r num">12 台</td><td class="r num">8 台</td><td>华科电子</td><td class="r num">￥3,120.00</td></tr>
+              <tr><td>伺服驱动器 <span class="muted">配套</span></td><td class="r num">12 台</td><td class="r num">4 台</td><td>恒昌机电</td><td class="r num">￥2,980.00</td></tr>
+              <tr><td>编码器线缆 <span class="muted">10m</span></td><td class="r num">12 根</td><td class="r num">12 根</td><td>华科电子</td><td class="r num">￥260.00</td></tr>
+            </tbody>
+          </table>
+          <div class="notice mt16">分配数量合计不得超过需求数量，系统按明细实时校验；非综合推荐供应商中标时，必须选择偏离原因并填写说明（≥5 字）。</div>
+        </div>
+        <div class="panel">
+          <h4>人工修正与留痕</h4>
+          <div class="small muted">原始计算结果不可覆盖，人工调整以追加记录的方式保存。</div>
+          <table class="mt16">
+            <thead><tr><th>时间</th><th>操作</th><th>说明</th><th>操作人</th></tr></thead>
+            <tbody>
+              <tr><td class="num nowrap">2026-10-28 10:12:09</td><td>系统计算</td><td class="muted">规则 v3 · 输入快照 #SC8841</td><td>系统</td></tr>
+              <tr><td class="num nowrap">2026-10-28 10:12:09</td><td>生成推荐</td><td class="muted">华科电子 88.4 分（推荐）</td><td>系统</td></tr>
+              <tr><td class="num nowrap">2026-10-28 11:05:44</td><td>人工调整</td><td>驱动器 4 台改由恒昌供货，缩短整体交期</td><td>陈立</td></tr>
+              <tr><td class="num nowrap">2026-10-28 11:05:44</td><td>偏离记录</td><td class="muted">原因：拆单可提前 6 天到货，满足产线计划</td><td>陈立</td></tr>
+            </tbody>
+          </table>
+          <div class="flex mt16"><span class="btn ghost sm">重新计算</span><span class="btn danger sm">人工改选</span><span class="right small muted">最近计算 2026-10-28 10:12:09</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+<script>Mock.shell('buyer','comparison','决策与执行 / <b>综合比价矩阵</b>')</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>物料与供应商档案 · 设计稿</title><link rel="stylesheet" href="mock.css"></head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sb"></aside>
+  <div class="main">
+    <header class="topbar" id="tb"></header>
+    <div class="content">
+      <div class="page-head"><h1>物料档案</h1><span class="sub">分类 / 编码 / 参考价 · 图片走上传组件</span>
+        <div class="actions"><span class="btn ghost"><svg width="14" height="14"><use href="#i-export"/></svg>导出</span><span class="btn primary">新增物料</span></div></div>
+
+      <div class="filters">
+        <div class="field"><label>物料分类</label><div class="select"><b>工业耗材</b><svg width="12" height="12"><use href="#i-arrow"/></svg></div></div>
+        <div class="field"><label>物料名称</label><div class="input" style="width:180px;color:#8DA3A7">输入名称或编码</div></div>
+        <div class="field"><label>状态</label><div class="select" style="width:150px"><b>启用</b><svg width="12" height="12"><use href="#i-arrow"/></svg></div></div>
+        <div class="tail"><span class="btn ghost">重置</span><span class="btn primary">查询</span></div>
+      </div>
+
+      <div class="tbl-wrap">
+        <div class="tbl-head"><h3>物料清单</h3><span class="small muted">共 46 条</span>
+          <div class="r"><span class="btn ghost sm">批量启用</span><span class="btn ghost sm">批量停用</span></div></div>
+        <table>
+          <thead><tr><th class="c" style="width:64px">图片</th><th class="nowrap">物料编码</th><th>物料名称</th><th>规格参数</th><th class="c">单位</th>
+            <th class="r">参考价</th><th>分类</th><th class="c">状态</th><th class="c">操作</th></tr></thead>
+          <tbody>
+            <tr><td class="c"><img src="../uploads/seed/material/01.jpg" alt="" style="width:48px;height:36px;object-fit:cover;border-radius:4px;background:#E8F1F1"></td>
+              <td class="code nowrap">M-EL-0012</td><td>工业级伺服电机</td><td class="muted">750W 220V 带刹车</td><td class="c">台</td><td class="r num">￥8,200.00</td><td>电子设备</td><td class="c"><span class="tag ok">启用</span></td><td class="c nowrap"><a>编辑</a> <a>更多</a></td></tr>
+            <tr><td class="c"><img src="../uploads/seed/material/02.jpg" alt="" style="width:48px;height:36px;object-fit:cover;border-radius:4px;background:#E8F1F1"></td>
+              <td class="code nowrap">M-EL-0013</td><td>伺服驱动器</td><td class="muted">3kW 三相 380V</td><td class="c">台</td><td class="r num">￥3,400.00</td><td>电子设备</td><td class="c"><span class="tag ok">启用</span></td><td class="c nowrap"><a>编辑</a> <a>更多</a></td></tr>
+            <tr><td class="c"><img src="../uploads/seed/material/03.jpg" alt="" style="width:48px;height:36px;object-fit:cover;border-radius:4px;background:#E8F1F1"></td>
+              <td class="code nowrap">M-IN-0044</td><td>不锈钢法兰</td><td class="muted">DN100 PN16 304</td><td class="c">件</td><td class="r num">￥162.00</td><td>工业耗材</td><td class="c"><span class="tag ok">启用</span></td><td class="c nowrap"><a>编辑</a> <a>更多</a></td></tr>
+            <tr><td class="c"><img src="../uploads/seed/material/04.jpg" alt="" style="width:48px;height:36px;object-fit:cover;border-radius:4px;background:#E8F1F1"></td>
+              <td class="code nowrap">M-IN-0045</td><td>液压油</td><td class="muted">46# 抗磨 200L</td><td class="c">桶</td><td class="r num">￥1,560.00</td><td>工业耗材</td><td class="c"><span class="tag ok">启用</span></td><td class="c nowrap"><a>编辑</a> <a>更多</a></td></tr>
+            <tr><td class="c"><img src="../uploads/seed/material/05.jpg" alt="" style="width:48px;height:36px;object-fit:cover;border-radius:4px;background:#E8F1F1"></td>
+              <td class="code nowrap">M-OF-0021</td><td>A4 复印纸</td><td class="muted">70g 500 张/包</td><td class="c">包</td><td class="r num">￥23.50</td><td>办公用品</td><td class="c"><span class="tag ok">启用</span></td><td class="c nowrap"><a>编辑</a> <a>更多</a></td></tr>
+            <tr><td class="c"><img src="../uploads/seed/material/06.jpg" alt="" style="width:48px;height:36px;object-fit:cover;border-radius:4px;background:#E8F1F1"></td>
+              <td class="code nowrap">M-LB-0008</td><td>防护手套</td><td class="muted">耐切割 5 级 L 码</td><td class="c">副</td><td class="r num">￥18.00</td><td>劳保用品</td><td class="c"><span class="tag ok">启用</span></td><td class="c nowrap"><a>编辑</a> <a>更多</a></td></tr>
+            <tr><td class="c"><img src="../uploads/seed/material/07.jpg" alt="" style="width:48px;height:36px;object-fit:cover;border-radius:4px;background:#E8F1F1"></td>
+              <td class="code nowrap">M-EL-0031</td><td>机架式服务器</td><td class="muted">2U 双路 64G</td><td class="c">台</td><td class="r num">￥98,000.00</td><td>电子设备</td><td class="c"><span class="tag ok">启用</span></td><td class="c nowrap"><a>编辑</a> <a>更多</a></td></tr>
+            <tr><td class="c"><img src="../uploads/seed/material/08.jpg" alt="" style="width:48px;height:36px;object-fit:cover;border-radius:4px;background:#E8F1F1"></td>
+              <td class="code nowrap">M-SP-0016</td><td>编码器线缆</td><td class="muted">10m 屏蔽双绞</td><td class="c">根</td><td class="r num">￥280.00</td><td>备品备件</td><td class="c"><span class="tag ok">启用</span></td><td class="c nowrap"><a>编辑</a> <a>更多</a></td></tr>
+            <tr><td class="c"><img src="../uploads/seed/material/09.jpg" alt="" style="width:48px;height:36px;object-fit:cover;border-radius:4px;background:#E8F1F1"></td>
+              <td class="code nowrap">M-QC-0005</td><td>三坐标测针</td><td class="muted">Φ2×20mm 红宝石</td><td class="c">支</td><td class="r num">￥465.00</td><td>备品备件</td><td class="c"><span class="tag ok">启用</span></td><td class="c nowrap"><a>编辑</a> <a>更多</a></td></tr>
+            <tr><td class="c"><img src="../uploads/seed/material/10.jpg" alt="" style="width:48px;height:36px;object-fit:cover;border-radius:4px;background:#E8F1F1"></td>
+              <td class="code nowrap">M-OF-0033</td><td>员工工装</td><td class="muted">春秋款 定制</td><td class="c">套</td><td class="r num">￥280.00</td><td>办公用品</td><td class="c"><span class="tag gray">停用</span></td><td class="c nowrap"><a>编辑</a> <a>更多</a></td></tr>
+          </tbody>
+        </table>
+        <div class="tbl-foot"><span>共 46 条 · 每页 10 条</span><div class="pager"><span class="pg">‹</span><span class="pg on">1</span><span class="pg">2</span><span class="pg">3</span><span class="pg">4</span><span class="pg">5</span><span class="pg">›</span></div></div>
+      </div>
+
+      <div class="panel mt16">
+        <h4>供应商档案（同一页签切换）</h4>
+        <table>
+          <thead><tr><th>供应商名称</th><th>统一社会信用代码</th><th>主营品类</th><th class="c">评级</th><th class="r">历史准时率</th><th class="r">质量评分</th><th class="c">准入状态</th><th class="c">操作</th></tr></thead>
+          <tbody>
+            <tr><td>华科电子有限公司</td><td class="muted">91310115MA1K3X8L2T</td><td>电子设备 / 备品备件</td><td class="c"><span class="tag ok">A</span></td><td class="r num">96%</td><td class="r num">94</td><td class="c"><span class="tag ok">合格供方</span></td><td class="c nowrap"><a>详情</a></td></tr>
+            <tr><td>恒昌机电设备有限公司</td><td class="muted">91310115MA1K5B2M9X</td><td>机电设备</td><td class="c"><span class="tag ok">A-</span></td><td class="r num">88%</td><td class="r num">86</td><td class="c"><span class="tag ok">合格供方</span></td><td class="c nowrap"><a>详情</a></td></tr>
+            <tr><td>瑞丰物资有限公司</td><td class="muted">91310115MA1G7Y6K3P</td><td>工业耗材</td><td class="c"><span class="tag warn">B+</span></td><td class="r num">79%</td><td class="r num">81</td><td class="c"><span class="tag warn">观察期</span></td><td class="c nowrap"><a>详情</a></td></tr>
+            <tr><td>联信自动化有限公司</td><td class="muted">91310115MA1J2L4R7W</td><td>自动化组件</td><td class="c"><span class="tag warn">B</span></td><td class="r num">92%</td><td class="r num">88</td><td class="c"><span class="tag ok">合格供方</span></td><td class="c nowrap"><a>详情</a></td></tr>
+            <tr><td>达成劳保用品有限公司</td><td class="muted">91310115MA1H9C5T2D</td><td>劳保用品</td><td class="c"><span class="tag warn">B</span></td><td class="r num">84%</td><td class="r num">77</td><td class="c"><span class="tag ok">合格供方</span></td><td class="c nowrap"><a>详情</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="mock.js"></script>
+<script>Mock.shell('buyer','materials','基础数据 / <b>物料与供应商档案</b>')</script>
+</body>
+</html>
